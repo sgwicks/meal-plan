@@ -1,0 +1,23 @@
+{
+  "name": "meal-plan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgwicks/meal-plan.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sgwicks/meal-plan/issues"
+  },
+  "homepage": "https://github.com/sgwicks/meal-plan#readme",
+  "devDependencies": {
+    "typescript": "^4.9.3"
+  }
+}
