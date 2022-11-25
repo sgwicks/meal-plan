@@ -28,3 +28,34 @@ export const blackBeanChilli: MenuItem = {
   extras: ['bell pepper', 'tomato']
 }
 
+export const menuItem: MenuItem = {
+  main: '',
+  carbs: [],
+  options: [],
+  extras: []
+}
+export const menuItem2: MenuItem = {
+  main: '',
+  carbs: [],
+  options: [],
+  extras: []
+}
+export const menuItem3: MenuItem = {
+  main: '',
+  carbs: [],
+  options: [],
+  extras: []
+}
+export const menuItem4: MenuItem = {
+  main: '',
+  carbs: [],
+  options: [],
+  extras: []
+}
+
+export const menuItem5: MenuItem = {
+  main: '',
+  carbs: [],
+  options: [],
+  extras: []
+}

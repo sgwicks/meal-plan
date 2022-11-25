@@ -4,13 +4,14 @@ const randomise = (range: number): number => {
   return Math.floor(Math.random() * range)
 }
 
-const chooseExtras = (extras: string[], choices: number, chosen: string[] = []): string[] => {
+const chooseExtras = <T>(extras: T[], choices: number, chosen: T[] = []): T[] => {
   if (!choices) return chosen
+  if (choices === extras.length) return extras
 
   const chosenExtras = [ ...chosen ]
   const choice = randomise(choices)
   chosenExtras.push(extras[choice])
-  const remainingExtras = extras.slice(choice, choice + 1)
+  const remainingExtras = extras.filter((item, i) => i !== choice)
 
   return chooseExtras(remainingExtras, --choices, chosenExtras)
 }
@@ -62,6 +63,15 @@ export const createMeal = (menuItem: MenuItem): Meal => {
 }
 
 const createMealPlan = (): MealPlan => {
+  const chosenItems = chooseExtras<MenuItem>(menu, 7)
+  mealPlan.monday = createMeal(chosenItems[0])
+  mealPlan.tuesday = createMeal(chosenItems[1])
+  mealPlan.wednesday = createMeal(chosenItems[2])
+  mealPlan.thursday = createMeal(chosenItems[3])
+  mealPlan.friday = createMeal(chosenItems[4])
+  mealPlan.saturday = createMeal(chosenItems[5])
+  mealPlan.sunday = createMeal(chosenItems[6])
+  
   return mealPlan
 }
 
