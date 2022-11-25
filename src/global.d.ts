@@ -1,4 +1,4 @@
-enum Carbs {
+declare enum Carbs {
   rice,
   pasta,
   chips,
@@ -12,25 +12,25 @@ enum Carbs {
   pitta
 }
 
-type carbs = keyof typeof Carbs
+declare type carbs = keyof typeof Carbs
 
-interface MenuItem {
+declare interface MenuItem {
   main: string,
   options: string[],
   carbs: carbs[],
   extras: string[]
 }
 
-type Menu = MenuItem[]
+declare type Menu = MenuItem[]
 
-interface Meal {
+declare interface Meal {
   main: string,
   options: string | null,
   carbs: carbs | null,
   extras: string[] | null
 }
 
-interface MealPlan {
+declare interface MealPlan {
   monday: Meal,
   tuesday: Meal,
   wednesday: Meal,
