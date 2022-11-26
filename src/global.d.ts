@@ -14,6 +14,8 @@ declare enum Carbs {
 
 declare type carbs = keyof typeof Carbs
 
+declare type day = "monday" | "tuesday" | "wednesday" | "thursday" | "friday" | "saturday" | "sunday"
+
 declare interface MenuItem {
   main: string,
   options: string[],
@@ -31,11 +33,5 @@ declare interface Meal {
 }
 
 declare interface MealPlan {
-  monday: Meal,
-  tuesday: Meal,
-  wednesday: Meal,
-  thursday: Meal,
-  friday: Meal,
-  saturday: Meal,
-  sunday: Meal
+  [k: day]: Meal
 }

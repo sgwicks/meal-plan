@@ -75,4 +75,4 @@ const createMealPlan = (): MealPlan => {
   return mealPlan
 }
 
-createMealPlan()
+export default createMealPlan
