@@ -30,7 +30,7 @@ export const blackBeanChilli: MenuItem = {
 
 export const spinachCurry: MenuItem = {
   main: 'Spinach Curry',
-  options: [],
+  options: ['potato', 'chickpea'],
   carbs: ['rice',	'naan',	'bhaji'],
   extras: ['bhaji']
 }
