@@ -16,12 +16,13 @@ const Meal: FunctionComponent<{ meal: Meal | undefined, day: day }> = ({ meal, d
       <article>
         <h2>{day}: {createMealTitle()}</h2>
         { meal.extras?.length
-          ? (<p>Extras: <ul>
-             {meal.extras.map(extra => (
-                <li>{extra}</li>
-              ))}
-            </ul>
-          </p>)
+          ? (<div>Extras:
+              <ul>
+              {meal.extras.map(extra => (
+                  <li key={day + extra}>{extra}</li>
+                ))}
+              </ul>
+          </div>)
           : null
         }
       </article>
